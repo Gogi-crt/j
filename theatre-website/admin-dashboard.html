@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - Театр им. Володи</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-boombox"></i> Театр им. Володи
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Афиша</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Партнеры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О театре</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">
+                        <i class="bi bi-person"></i> Администратор
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-box-arrow-right"></i> Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 bg-light sidebar">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-dashboard.html">
+                            <i class="bi bi-speedometer2 me-2"></i> Панель управления
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-calendar-event me-2"></i> Мероприятия
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-people me-2"></i> Пользователи
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-ticket-perforated me-2"></i> Бронирования
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-building me-2"></i> Партнеры
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-bar-chart me-2"></i> Аналитика
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-gear me-2"></i> Настройки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="col-md-10">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Панель управления</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Экспорт</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Печать</button>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-calendar"></i> Неделя
+                    </button>
+                </div>
+            </div>
+
+            <!-- Statistics cards -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-theme shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs fw-bold text-theme text-uppercase mb-1">
+                                        Посетители (сегодня)
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">142</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-people fs-1 text-theme"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs fw-bold text-success text-uppercase mb-1">
+                                        Бронирования (сегодня)
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">24</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-ticket-perforated fs-1 text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs fw-bold text-info text-uppercase mb-1">
+                                        Доход (месяц)
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">₽ 542,300</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-currency-ruble fs-1 text-info"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs fw-bold text-warning text-uppercase mb-1">
+                                        Запросы в поддержку
+                                    </div>
+                                    <div class="h5 mb-0 fw-bold">8</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="bi bi-question-circle fs-1 text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and tables -->
+            <div class="row">
+                <div class="col-xl-8 mb-4">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 fw-bold text-theme">Статистика посещаемости</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-bar">
+                                <img src="img/chart.png" class="img-fluid" alt="Статистика посещаемости">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 mb-4">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 fw-bold text-theme">Распределение мест</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-pie">
+                                <img src="img/pie-chart.png" class="img-fluid" alt="Распределение мест">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent bookings -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 fw-bold text-theme">Последние бронирования</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя</th>
+                                <th>Спектакль</th>
+                                <th>Дата</th>
+                                <th>Места</th>
+                                <th>Статус</th>
+                                <th>Действия</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>#235</td>
+                                <td>Иван Иванов</td>
+                                <td>Гамлет</td>
+                                <td>15.12.2025</td>
+                                <td>Партер, ряд 5, места 12-13</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-theme">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#234</td>
+                                <td>Мария Петрова</td>
+                                <td>Чайка</td>
+                                <td>20.12.2025</td>
+                                <td>Балкон, ряд 2, место 7</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-theme">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#233</td>
+                                <td>Алексей Сидоров</td>
+                                <td>Ревизор</td>
+                                <td>25.12.2025</td>
+                                <td>Ложа 3, места 1-2</td>
+                                <td><span class="badge bg-warning text-dark">Ожидает оплаты</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-theme">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#232</td>
+                                <td>Елена Васильева</td>
+                                <td>Гамлет</td>
+                                <td>15.12.2025</td>
+                                <td>Партер, ряд 6, место 8</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-theme">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#231</td>
+                                <td>Дмитрий Козлов</td>
+                                <td>Вишнёвый сад</td>
+                                <td>05.01.2025</td>
+                                <td>Балкон, ряд 1, место 4</td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-theme">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Театр им. Володи</h5>
+                <p>Лучшие постановки классических и современных пьес</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Контакты</h5>
+                <p>г. Москва, ул. Театральная, 1</p>
+                <p>+7 (495) 123-45-67</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Социальные сети</h5>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-telegram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            &copy; 2025 Театр им. Володи. Все права защищены.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

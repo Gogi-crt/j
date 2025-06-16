@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя - Театр им. Чехова</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-boombox"></i> Театр им. Володи
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Афиша</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Партнеры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О театре</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="profile.html">
+                        <i class="bi bi-person"></i> Иван Иванов
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <i class="bi bi-box-arrow-right"></i> Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header bg-theme text-white">
+                    <h5 class="card-title mb-0">Информация о пользователе</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <img src="img/user-avatar.jpg" class="rounded-circle" width="120" height="120" alt="Иван Иванов">
+                    </div>
+                    <h4>Иван Иванов</h4>
+                    <p class="text-muted">ivan@example.com</p>
+                    <p><span class="badge bg-primary">Премиум участник</span></p>
+                    <hr>
+                    <p><i class="bi bi-telephone me-2"></i> +7 (999) 123-45-67</p>
+                    <p><i class="bi bi-calendar me-2"></i> Дата регистрации: 12.10.2025</p>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Настройки профиля</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-person me-2"></i> Личные данные
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-shield-lock me-2"></i> Безопасность
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-bell me-2"></i> Уведомления
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="bi bi-credit-card me-2"></i> Способы оплаты
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header bg-theme text-white">
+                    <h5 class="card-title mb-0">Мои билеты</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Спектакль</th>
+                                <th>Дата</th>
+                                <th>Места</th>
+                                <th>QR-код</th>
+                                <th>Статус</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Гамлет</td>
+                                <td>15.12.2025, 19:00</td>
+                                <td>Партер, ряд 5, места 12-13</td>
+                                <td>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#qrModal">
+                                        <img src="img/qr-code.png" width="50" alt="QR-код">
+                                    </a>
+                                </td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                            </tr>
+                            <tr>
+                                <td>Чайка</td>
+                                <td>20.12.2023, 18:30</td>
+                                <td>Балкон, ряд 2, место 7</td>
+                                <td>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#qrModal">
+                                        <img src="img/qr-code.png" width="50" alt="QR-код">
+                                    </a>
+                                </td>
+                                <td><span class="badge bg-success">Оплачено</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ревизор</td>
+                                <td>25.12.2025, 20:00</td>
+                                <td>Ложа 3, места 1-2</td>
+                                <td>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#qrModal">
+                                        <img src="img/qr-code.png" width="50" alt="QR-код">
+                                    </a>
+                                </td>
+                                <td><span class="badge bg-warning text-dark">Ожидает оплаты</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">История бронирований</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Вишнёвый сад</h6>
+                                <small>05.11.2023</small>
+                            </div>
+                            <p class="mb-1">Партер, ряд 4, место 8</p>
+                            <small>Статус: <span class="text-success">Посещено</span></small>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Три сестры</h6>
+                                <small>28.10.2025</small>
+                            </div>
+                            <p class="mb-1">Балкон, ряд 1, место 5</p>
+                            <small>Статус: <span class="text-success">Посещено</span></small>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Дядя Ваня</h6>
+                                <small>15.10.2025</small>
+                            </div>
+                            <p class="mb-1">Партер, ряд 6, место 10</p>
+                            <small>Статус: <span class="text-success">Посещено</span></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QR-код модальное окно -->
+<div class="modal fade" id="qrModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Электронный билет</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="img/qr-code.png" class="img-fluid mb-3" alt="QR-код билета">
+                <h5>Гамлет</h5>
+                <p>15 декабря 2025, 19:00</p>
+                <p>Партер, ряд 5, места 12-13</p>
+                <button class="btn btn-outline-primary mt-2">
+                    <i class="bi bi-printer"></i> Распечатать билет
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Театр им. Володи</h5>
+                <p>Лучшие постановки классических и современных пьес</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Контакты</h5>
+                <p>г. Москва, ул. Театральная, 1</p>
+                <p>+7 (495) 123-45-67</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Социальные сети</h5>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-telegram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            &copy; 2023 Театр им. Володи. Все права защищены.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
